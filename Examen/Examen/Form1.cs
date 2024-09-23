@@ -19,18 +19,19 @@ namespace Examen
 
         private void tbNombre_TextChanged(object sender, EventArgs e)
         {
-            // Se almacena el Nombre de la persona
+            // Se ingresa el nombre de la persona
 
         }
 
         private void tbApellido_TextChanged(object sender, EventArgs e)
         {
-            // Se almacena el Apellido de la persona
+            // Se ingresa el apellido de la persona
 
         }
         private void dtpNacimiento_ValueChanged(object sender, EventArgs e)
         {
-            // Fecha de nacimiento de la persona
+            // Se ingresa la fecha de nacimiento de la persona
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,15 +41,23 @@ namespace Examen
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            // Agregar propiedades de la persona
-            btnAgregar.Enabled = true;
+            // Se almacenan los datos de la persona
+            agregar();    
 
         }
+        private void agregar()
+        {
+            if (tbNombre.Text.Trim().Length > 0)
+            {
+                string nombre = tbNombre.Text.Trim();
 
+            }
+        }
         private void btnMostrarEdad_Click(object sender, EventArgs e)
         {
-            // Mostrar edad
-            btnMostrarEdad.Enabled = true;
+            // El botón muestra la edad de la persona
+
+
 
         }
 
