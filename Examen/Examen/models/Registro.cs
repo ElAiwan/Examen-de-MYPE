@@ -9,17 +9,12 @@ namespace Examen.models
     internal class Registro
     {
         public Registro() { }
-        // Almacenar 30 personas
         public List<Persona> Personas { get; set; } = new List<Persona>();
         public void AgregarPersona(Persona persona)
         {
             Personas.Add(persona);
         }
-        public void EliminarPersona(Persona persona)
-        {
-            Personas.Remove(persona);
-        }
-        // Mostrar las personas en el lbPersona
+        
         public string MostrarPersonas()
         {
             string listaPersonas = "";
@@ -29,6 +24,7 @@ namespace Examen.models
             }
             return listaPersonas;
         }
+
 
     }
 }

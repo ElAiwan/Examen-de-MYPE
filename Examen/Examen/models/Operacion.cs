@@ -9,14 +9,25 @@ namespace Examen.models
     internal class Operacion
     {
         public Operacion() { }
-        // Calcular la edad de una persona y decir si es mayor o menor de edad
-        public Operacion(string name) { }
-        public string Name { get; set; }
+
+        public Persona persona { get; set; }
         public int Edad { get; set; }
         public string MayorMenor { get; set; }
-        public void CalcularEdad(int fechaNacimiento)
+
+        // Calcula la edad de una persona
+        public void CalcularEdad(DateTime fechaNacimiento)
         {
-            Edad = 2021 - fechaNacimiento;
+            // Calcula la edad en años
+            int edad = DateTime.Now.Year - fechaNacimiento.Year;
+
+            // Verifica si ya pasó el cumpleaños este año, si no, resta un año
+            if (fechaNacimiento > DateTime.Now.AddYears(-edad))
+            {
+                edad--;
+            }
+
+            Edad = edad;
+
             if (Edad >= 18)
             {
                 MayorMenor = "Mayor de edad";
@@ -26,7 +37,7 @@ namespace Examen.models
                 MayorMenor = "Menor de edad";
             }
         }
-
-
+        
     }
 }
+

@@ -12,7 +12,7 @@ namespace Examen.models
 
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public int FechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         public string Ciudad { get; set; }
 
     }

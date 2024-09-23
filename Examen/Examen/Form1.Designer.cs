@@ -98,6 +98,7 @@
             this.lbPersona.Name = "lbPersona";
             this.lbPersona.Size = new System.Drawing.Size(688, 468);
             this.lbPersona.TabIndex = 7;
+            this.lbPersona.SelectedIndexChanged += new System.EventHandler(this.lbPersona_SelectedIndexChanged);
             // 
             // RdE
             // 
